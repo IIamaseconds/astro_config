@@ -1,12 +1,19 @@
-return { -- this table overrides highlights in all themes
-  -- Normal = { bg = "#000000" },
-  Normal = { 
+return {
+  Normal = {
+    guibg = NONE,
     bgui = NONE,
     fgui = NONE,
     ctermbg = NONE,
     ctermfb = NONE,
-    -- gui = NONE,
-
+    gui = NONE,
   },
-
-} 
+  NormalNC = {
+    guibg = NONE
+  },
+  NeoTreeNormal = {
+    guibg = NONE
+  },
+  NeoTreeNormalNC = {
+    guibg = NONE
+  }
+}

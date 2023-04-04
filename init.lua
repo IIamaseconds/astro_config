@@ -18,11 +18,11 @@ return {
   },
   -- Set colorscheme to use
   colorscheme = "astrodark",
-  default_theme = {
-    colors = {
-      bg = "red",
-    },
-  },
+  -- default_theme = {
+  --   colors = {
+  --     bg = "red",
+  --   },
+  -- },
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
