@@ -1,9 +1,5 @@
 return {
   {
-    "tpope/vim-abolish",
-    lazy = false
-  },
-  {
     "petertriho/nvim-scrollbar",
     lazy = false,
     config = function()
