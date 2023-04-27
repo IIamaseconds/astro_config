@@ -2,7 +2,7 @@
 
 A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
-## 🛠️ Installation
+## 🛠️ Installation of AstroNvim
 
 #### Make a backup of your current nvim and shared folder
 
@@ -17,16 +17,24 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
-
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/user
+git clone https://github.com/IIamaseconds/astro_config ~/.config/nvim/lua/user
+```
+
+#### WSL2 Ubuntu dependencies installation
+```shell
+sudo add-apt-repository ppa:lazygit-team/release
+sudo apt-get update
+sudo apt-get install lazygit
+sudo apt-get install ripgrep
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+wget https://github.com/MordechaiHadad/bob/releases/download/v2.3.2/bob-linux-x86_64.zip
+unzip bob-linux-x86_64.zip
+chmod +x bob
 ```
 
 #### Start Neovim
