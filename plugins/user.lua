@@ -1,9 +1,5 @@
 return {
   {
-    "tpope/vim-abolish",
-    lazy = false
-  },
-  {
     "petertriho/nvim-scrollbar",
     lazy = false,
     config = function()
@@ -45,21 +41,5 @@ return {
         }
       })
     end,
-  },
-  {
-    "nvim-telescope/telescope.nvim",
-    config = function()
-      require('telescope').setup({
-        defaults = {
-          layout_strategy = 'vertical',
-          file_ignore_patterns = {
-            "node_modules",
-            "obj",
-            "obj",
-            "bin",
-          }
-        },
-      })
-    end
-  },
+  }
 }
