@@ -38,7 +38,8 @@ return {
               -- "user"
             }
           },
-        }
+          follow_current_file = true,
+        },
       })
     end,
   }
