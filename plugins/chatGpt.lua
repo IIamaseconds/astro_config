@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   config = function()
     require("chatgpt").setup({
-      api_key_cmd = 'gpg --decrypt ~/.ssh/chatGPT_secret.gpg: 2>/dev/null',
+      api_key_cmd = 'gpg --decrypt ~/.ssh/chatGPT_secret.gpg 2>/dev/null',
       yank_register = "+",
       edit_with_instructions = {
         diff = false,
