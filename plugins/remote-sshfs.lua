@@ -5,6 +5,11 @@ return {
     config = function()
       local api = require('remote-sshfs.api')
 
+      local raspberryConfig = io.open('~/.ssh/raspberry');
+      if raspberryConfig == nil then
+        return;
+      end
+
       require('remote-sshfs').setup({
         connections = {
           ssh_configs = {
