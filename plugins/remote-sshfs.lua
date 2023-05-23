@@ -5,7 +5,7 @@ return {
     config = function()
       local api = require('remote-sshfs.api')
 
-      local raspberryConfig = io.open('~/.ssh/raspberry');
+      local raspberryConfig = io.open('~/.ssh/sshfs.config');
       if raspberryConfig == nil then
         return;
       end
