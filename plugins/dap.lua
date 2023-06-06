@@ -175,6 +175,11 @@ return { {
                     type = "coreclr",
                     name = "launch - netcoredbg",
                     request = "launch",
+                    args = { "environment=development" },
+                    env = {
+                        ASPNETCORE_ENVIRONMENT = "development",
+                        ASPNETCORE_URLS = "https://localhost:7119"
+                    },
                     program = function()
                         if vim.fn.confirm('Recompile?', '&Yes\n&No', 2) == 1 then
                             vim.g.dotnet_build_project()
