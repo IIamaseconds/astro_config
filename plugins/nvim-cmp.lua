@@ -24,7 +24,6 @@ return {
           ['<C-k>'] = cmp.mapping.select_prev_item(),
           -- ['<TAB>'] = cmp.mapping.select_next_item(),
           -- ['<S-TAB>'] = cmp.mapping.select_prev_item(),
-          ['<TAB>'] = cmp.mapping.select_next_item(),
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
