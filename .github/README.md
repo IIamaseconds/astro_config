@@ -4,6 +4,7 @@ A user configuration template for [AstroNvim](https://github.com/AstroNvim/Astro
 
 ## Setup WSL2
 ``` shell
+# Install dependencies
 sudo apt install gcc
 sudo apt install build-essential
 sudo apt install unzip
