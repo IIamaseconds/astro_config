@@ -9,21 +9,21 @@ sudo apt install build-essential
 sudo apt install unzip
 curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 
--- Install NVM // https://github.com/nvm-sh/nvm#installing-and-updating
+# Install NVM // https://github.com/nvm-sh/nvm#installing-and-updating
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install -lts
 
--- Install bob // Clone https://github.com/MordechaiHadad/bob.git
+# Install bob // Clone https://github.com/MordechaiHadad/bob.git
 git clone https://github.com/MordechaiHadad/bob.git
 
 cd bob
 cargo build --release
 cd target/release
 
--- Move bob to a folder for installation and install neovim
+# Move bob to a folder for installation and install neovim
 ./bob use 0.9.0
 
--- Update .bashrc
+# Update .bashrc
 alias nvim=/home/username/.local/share/bob/nvim-bin/nvim
 alias bob=/path/to/bob
 
