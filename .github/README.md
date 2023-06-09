@@ -1,15 +1,23 @@
-# AstroNvim User Configuration Example
+# AstroNvim setup for WSL2
 
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
-
-## Setup WSL2
-``` shell
-# Install dependencies
+#### WSL2 Ubuntu dependencies installation
+```shell
+sudo apt update
 sudo apt install gcc
 sudo apt install build-essential
 sudo apt install unzip
+sudo apt install ripgrep
 curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 
+# Lazygit installation
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+```
+
+## Setup WSL2
+``` shell
 # Install NVM // https://github.com/nvm-sh/nvm#installing-and-updating
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install -lts
@@ -29,19 +37,6 @@ alias nvim=/home/username/.local/share/bob/nvim-bin/nvim
 alias bob=/path/to/bob
 
 export BROWSER=wslview
-```
-
-#### WSL2 Ubuntu dependencies installation
-```shell
-sudo add-apt-repository ppa:lazygit-team/release
-sudo apt-get update
-sudo apt-get install ripgrep
-
-# Lazygit installation
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
 ```
 
 ## 🛠️ Installation of AstroNvim
