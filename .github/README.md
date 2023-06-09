@@ -26,6 +26,8 @@ cd target/release
 -- Update .bashrc
 alias nvim=/home/username/.local/share/bob/nvim-bin/nvim
 alias bob=/path/to/bob
+
+EXPORT BROWSER=wslview
 ```
 
 #### WSL2 Ubuntu dependencies installation
