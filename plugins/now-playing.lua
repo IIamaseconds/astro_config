@@ -8,10 +8,16 @@ nowPlaying.appleScript = [[
   use scripting additions
 
   tell application "Spotify"
-    set c to current track
-    set trackName to name of c
-    set artistName to artist of c
-    set albumName to album of c
+    if player state is paused then
+      return "Spotify is paused"
+    else if player state is stopped then
+      return "Spotify is stopped"
+    else
+      set c to current track
+      set trackName to name of c
+      set artistName to artist of c
+      set albumName to album of c
+    end if
   end tell
 
   set trackInfo to artistName & " - " & trackName & linefeed & "Album: " & albumName
@@ -43,6 +49,7 @@ nowPlaying.start = function()
   -- Execute the AppleScript using osascript
   local stdout = uv.new_pipe(false)
   uv.spawn('osascript', {
+    -- args = {'-e', nowPlaying.appleScript},
     args = {'-e', nowPlaying.appleScript},
     stdio = {nil, stdout},
   }, function(code)
