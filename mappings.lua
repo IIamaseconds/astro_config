@@ -6,6 +6,12 @@
 return {
   -- first key is the mode
   n = {
+    -- Override J behavior
+    ["J"] = { "mzJ`z", desc = "Join lines" },
+    -- Move selection up or down
+    -- ["J"] = { ":m '>+1<CR>gv=gv", desc = "Move line down" },
+    -- ["K"] = { ":m '<-2<CR>gv=gv", desc = "Move line up" },
+    --
     -- RUST Debug
     ["<C-Space>"] = {
       require("rust-tools").hover_actions.hover_actions,
@@ -42,5 +48,11 @@ return {
   },
   i = {
     ["<C-s>"] = { "<esc>:w!<cr>", desc = "Save File" }, -- Save and exit insert
+  },
+  v = {
+    -- Move selection up or down
+    ["J"] = { ":m '>+1<CR>gv=gv", desc = "Move line down" },
+    ["K"] = { ":m '<-2<CR>gv=gv", desc = "Move line up" },
+
   }
 }
