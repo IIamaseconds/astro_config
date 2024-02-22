@@ -36,6 +36,9 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
+    -- Close current buffer
+    ["<leader>q"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
+
     -- Switch active buffer
     ["<S-l>"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc =
     "Next buffer" },
